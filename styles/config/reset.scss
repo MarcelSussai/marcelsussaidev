@@ -1,0 +1,87 @@
+// Reset CSS
+// ________________________________________________________________
+
+// Lidando com o Box sizing
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Removendo padding padrão
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+// Removendo margin padrão
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+// Adicionando um scroll suave para links da mesma página
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+// Ajeitando o Body
+body {
+  min-height: 100vh;
+  // Opcional: faz com que os textos renderizem mais rápido, bom em caso de bastante texto!
+  // text-rendering: optimizeSpeed;
+  padding: 0;
+  line-height: 1.6;
+}
+
+
+// Removendo list styles dos elementos ul e ol com class definida
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+// Os elementos que não tenham class definida recebem os estilos padrão
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+// Fazendo as imagens mais fáceis de trtabalhar
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// Inherit fonts para inputs e buttons
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// Removendo todas as animações para pessoas que preferem não ver
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+// ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
