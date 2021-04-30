@@ -1,0 +1,104 @@
+@keyframes appearByRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appearByLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appearByTop {
+  from {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appearByBottom {
+  from {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appearByScale {
+  from {
+    transform: scale3d(0, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale3d(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes showLogo {
+  from {
+    opacity: 0;
+    transform: translate3d(-72px, -16px, 0) scale(2);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0) scale(1);
+  }
+}
+
+// ________________________________
+.ani-appear-01 {
+  animation: appear .4s cubic-bezier($cb-02) forwards;
+}
+// ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+// ________________________________
+.ani-appearByScale-01 {
+  animation: appearByScale .4s cubic-bezier($cb-16) .6s forwards;
+}
+.ani-appearByScale-02 {
+  animation: appearByScale .4s cubic-bezier($cb-10) .9s forwards;
+}
+// ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+// ________________________________
+.ani-appearByLeft-01 {
+  animation: appearByLeft .4s cubic-bezier($cb-05) .8s forwards;
+}
+// ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+// ________________________________
+.ani-appearByRight-01 {
+  animation: appearByRight .4s cubic-bezier($cb-16) .6s forwards;
+}
+.ani-appearByRight-02 {
+  animation: appearByRight .8s cubic-bezier($cb-16) .8s forwards;
+}
+// ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾

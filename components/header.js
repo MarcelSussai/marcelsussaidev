@@ -1,24 +1,23 @@
 
-import LogoUm from './svgs/logoum';
+import LogoMarcelSussai from './svgs/logoMarcelSussai';
 import NavMenu from './navmenu';
 
 const Header = () => (
   <>
-    <header className="header-container">
+    <header className="c-header">
 
-      <div className="b-c-logotype">
-        <LogoUm className="logo-um"/>
-        <div className="b-header-title">
-          <h1 className="b-c-h1">
-            <span className="title-marcel title-name"> Marcel </span>
-            <span className="title-sussai title-name"> Sussai </span> <br />
-            <span className="title-desc"> Desenvolvedor Web FullStack </span>
+      <div className="c-header-logotype">
+        <LogoMarcelSussai className="svg-logo-ms"/>
+        <div className="c-header-title">
+          <h1>
+            <span className="txt-span-marcel"> Marcel </span>
+            <span className="txt-span-sussai"> Sussai </span> <br />
+            <span className="txt-span-desc"> Desenvolvedor Web FullStack </span>
           </h1>
         </div>
       </div>
-
+      
       <NavMenu />
-
     </header>
   </>
 );

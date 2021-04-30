@@ -1,0 +1,77 @@
+
+.c-header {
+
+  background: $color-black-02;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 86px;
+  padding: 8px 2px 6px 2px;
+  @include displayFlex(center, center);
+  box-shadow: 0 4px 8px rgba($color-black-01, 0.8);
+  opacity: 0;
+  animation: appear .4s cubic-bezier($cb-02) .1s forwards;
+
+  @media (min-width: 686px) {
+    height: 112px;
+  }
+  @media (min-width: 808px) {
+    height: 104px;
+  }
+
+  .c-header-logotype {
+    @include displayFlex(center, center);
+    flex-direction: row;
+  }
+
+  .c-header-title {
+    padding: 0 4px 0 4px;
+    margin-top: -2px;
+    @include gradientBorder(1px);
+    border-left: none;
+    border-right: none;
+    @include displayFlex(center, center);
+    flex-direction: column;
+    opacity: 0;
+    animation: showLogo .8s cubic-bezier($cb-15) .6s forwards;
+    // padding: 2px;
+  }
+
+  h1 {
+    font-size: 1rem;
+    height: 62px;
+  }
+
+  .txt-span-marcel, .txt-span-sussai {
+    @include font(2rem, 900, 1.4, 01);
+    text-shadow: 4px 4px 4px rgba(#000, 0.8);
+  }
+
+  .txt-span-marcel {
+    color: $color-blue-02;
+  }
+
+  .txt-span-sussai {
+    color: $color-green-02;
+  }
+
+  .txt-span-desc {
+    color: $color-yellow-04;
+    display: block;
+    margin-top: -2px;
+    @include font(0.94rem, 300, 1, 02);
+  }
+
+  .svg-logo-ms {
+    $size: 70px;
+    width: $size;
+    height: $size;
+    opacity: 0;
+    animation: showLogo .8s cubic-bezier($cb-15) .4s forwards;
+  }
+
+}
+
+
+

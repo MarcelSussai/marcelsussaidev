@@ -1,2 +1,27 @@
-@import './config/reset';
+/*
+________________________________
+Nomenclatura de classes:
+
+c-algumacoisa = Container
+txt-p-algumacoisa = texto tag p ou
+txt-span-algumacoisa = texto tag span
+img-algumacoisa = imagem
+svg-algumacoisa = imagem svg qu7e pode ser um component react 
+ou uma tag image buscando um svg
+etc...
+
+c-header -> é um container (c), que contém um coteúdo DOM também
+txt-p-nameClass -> é um texto de parágrafo
+e assim vai ...
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+*/
+
+@import './config/_vars';
+@import './config/_mixins';
+@import './config/_reset';
+@import './config/_animations';
+
+@import './components/_header';
+@import './components/_navmenu';
+@import './components/_home';
 

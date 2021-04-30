@@ -1,0 +1,80 @@
+
+
+@mixin displayFlex($jusCon, $aliIte : unset) {
+  display: flex;
+  justify-content: $jusCon;
+  align-items: $aliIte;
+}
+
+@mixin gradientBorder($stroke) {
+  border: $stroke solid  $color-yellow-04;
+  border-image-source: linear-gradient(45deg, $color-blue-02, $color-green-02);
+  border-image-slice: 1;
+}
+
+@mixin font( $size, $weight, $lineHeight: 1.6, $font ) {
+  @if $font == 01 {
+    font-family: $font-01;
+  } 
+  @else if $font == 02 {
+    font-family: $font-02;
+  }
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+@mixin transitionMix($typeTrans, $time: 1s, $prop: all) {
+  @if $typeTrans == 01 {
+    transition: $prop $time cubic-bezier($cb-01);
+  }
+  @else if $typeTrans == 02 {
+    transition: $prop $time cubic-bezier($cb-02);
+  }
+  @else if $typeTrans == 03 {
+    transition: $prop $time cubic-bezier($cb-03);
+  }
+  @else if $typeTrans == 04 {
+    transition: $prop $time cubic-bezier($cb-04);
+  }
+  @else if $typeTrans == 05 {
+    transition: $prop $time cubic-bezier($cb-05);
+  }
+  @else if $typeTrans == 06 {
+    transition: $prop $time cubic-bezier($cb-06);
+  }
+  @else if $typeTrans == 07 {
+    transition: $prop $time cubic-bezier($cb-07);
+  }
+  @else if $typeTrans == 08 {
+    transition: $prop $time cubic-bezier($cb-08);
+  }
+  @else if $typeTrans == 09 {
+    transition: $prop $time cubic-bezier($cb-09);
+  }
+  @else if $typeTrans == 10 {
+    transition: $prop $time cubic-bezier($cb-10);
+  }
+  @else if $typeTrans == 11 {
+    transition: $prop $time cubic-bezier($cb-11);
+  }
+  @else if $typeTrans == 12 {
+    transition: $prop $time cubic-bezier($cb-12);
+  }
+  @else if $typeTrans == 13 {
+    transition: $prop $time cubic-bezier($cb-13);
+  }
+  @else if $typeTrans == 14 {
+    transition: $prop $time cubic-bezier($cb-14);
+  }
+  @else if $typeTrans == 15 {
+    transition: $prop $time cubic-bezier($cb-15);
+  }
+  @else if $typeTrans == 16 {
+    transition: $prop $time cubic-bezier($cb-16);
+  }
+  @else if $typeTrans == 17 {
+    transition: $prop $time cubic-bezier($cb-17);
+  }
+}
+

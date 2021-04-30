@@ -1,9 +1,14 @@
 import Head from '../components/head';
+import Header from '../components/header';
+import Home from '../components/home';
 
 const MarcelSussai = () => (
   <>
     <Head title="Home" />
-    teste
+    <Header />
+    <a name="home" id="home" />
+    <Home />
+
   </>
 );
 
