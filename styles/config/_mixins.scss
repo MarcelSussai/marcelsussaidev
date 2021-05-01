@@ -6,13 +6,13 @@
   align-items: $aliIte;
 }
 
-@mixin gradientBorder($stroke, $sides : "") {
+@mixin gradientBorder($stroke, $sides: null) {
 
   border: $stroke solid $color-yellow-04;
   border-image-source: linear-gradient(45deg, $color-blue-02, $color-green-02);
   border-image-slice: 1;
 
-  @if ($sides != "") {
+  @if ($sides != null) {
     @each $side in $sides {
       @if ($side == 'top') {
         border-#{$side}: none;
