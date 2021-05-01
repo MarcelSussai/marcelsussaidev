@@ -148,6 +148,12 @@
 
 }
 
+.c-sec-head-content {
+  @include gradientBorder(2px);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
 
 .c-sec-head-content {
   @include displayFlex(center, center);
@@ -213,11 +219,6 @@
     }
 
   }
-  
-  @include gradientBorder(2px);
-  border-top: none;
-  border-left: none;
-  border-right: none;
 }
 
 
