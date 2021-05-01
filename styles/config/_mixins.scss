@@ -6,9 +6,44 @@
   align-items: $aliIte;
 }
 
-@mixin gradientBorder($stroke, $colorBase: $color-yellow-04) {
+@mixin gradientBorder($stroke, $t: false, $r: false, $b: false, $l: false) {
 
-  border: $stroke solid $colorBase;
+  @if $t == true {
+    border: { 
+      top: $stroke solid $color-yellow-04;
+      right: none;
+      bottom: none;
+      left: none;
+    };
+  }
+
+  @if $r == true {
+    border: { 
+      top: none;
+      right: $stroke solid $color-yellow-04;
+      bottom: none;
+      left: none;
+    };
+  }
+
+  @if $b == true {
+    border: { 
+      top: none;
+      right: none;
+      bottom: $stroke solid $color-yellow-04;
+      left: none;
+    };
+  }
+  
+  @if $l == true {
+    border: { 
+      top: none;
+      right: none;
+      bottom: none;
+      left: $stroke solid $color-yellow-04;
+    };
+  }
+
   border-image-source: linear-gradient(45deg, $color-blue-02, $color-green-02);
   border-image-slice: 1;
 
