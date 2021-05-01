@@ -8,22 +8,22 @@
 
 @mixin gradientBorder($stroke, $sides: null) {
 
-  border: $stroke solid $color-yellow-04;
+  border: $stroke solid #fff4d2;
   border-image-source: linear-gradient(45deg, $color-blue-02, $color-green-02);
   border-image-slice: 1;
 
-  @if ($sides != null) {
+  @if $sides != null {
     @each $side in $sides {
-      @if ($side == 'top') {
+      @if $side == 'top' {
         border-#{$side}: none;
       } 
-      @else if ($side == 'right') {
+      @else if $side == 'right' {
         border-#{$side}: none;
       } 
-      @else if ($side == 'bottom') {
+      @else if $side == 'bottom' {
         border-#{$side}: none;
       } 
-      @else if ($side == 'left') {
+      @else if $side == 'left' {
         border-#{$side}: none;
       }
     }
