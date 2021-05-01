@@ -7,7 +7,7 @@
   z-index: 1000;
   width: 100vw;
   height: 86px;
-  padding: 8px 2px 6px 2px;
+  padding: 8px 0 6px 0;
   @include displayFlex(center, center);
   box-shadow: 0 4px 8px rgba($color-black-01, 0.8);
   opacity: 0;
