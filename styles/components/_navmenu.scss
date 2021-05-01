@@ -1,5 +1,5 @@
 .c-btn-menu {
-
+  @include transitionMix(11, 0.6s);
   position: fixed;
   right: 0px;
   bottom: 24px;
@@ -12,7 +12,6 @@
   border-bottom: solid 3px $color-purple-01;
   border-bottom-left-radius: 16px;
   border-top-left-radius: 16px;
-  @include transitionMix(11, 0.6s);
   opacity: 0;
   animation: appearByRight .6s cubic-bezier($cb-01) .4s forwards;
   
@@ -31,12 +30,12 @@
 }
 
 .btn-menu {
+  @include displayFlex(space-between, unset);
+  @include transitionMix(16, 0.6s);
+  flex-direction: column;
   $size: 26px;
   width: $size;
   height: $size;
-  @include displayFlex(space-between, unset);
-  flex-direction: column;
-  @include transitionMix(16, 0.6s);
 
   &.open {
     transform: rotate(-45deg);
@@ -80,14 +79,14 @@
 
 .c-nav {
 
+  @include displayFlex(center, center);
+  @include transitionMix(11, 0.6s);
   width: 100%;
   padding: 8px 0 8px 0;
   position: fixed;
   left: 0;
   bottom: -104px;
   background: linear-gradient(90deg, rgba($color-blue-02, 0.4) 0%,  rgba($color-green-02, 0.4) 100%);
-  @include displayFlex(center, center);
-  @include transitionMix(11, 0.6s);
 
   @media (min-width: 686px) {
     position: relative;
@@ -104,8 +103,8 @@
   }
   
   .c-nav-ul {
-    width: 100%;
     @include displayFlex(space-around, flex-end);
+    width: 100%;
     flex-direction: row;
     margin: 0 4px 0 4px;
     @media (min-width: 686px) {
@@ -117,6 +116,8 @@
   .link {
 
     @include displayFlex(space-around, center);
+    @include font(0.92rem, 400, 1.2, 02);
+    @include transitionMix(02, 0.3s);
     flex-direction: column;
     background: $color-black-05;
     width: 23vw;
@@ -126,13 +127,11 @@
     text-align: center;
     color: $color-yellow-04;
     text-decoration: none;
-    @include font(0.92rem, 400, 1.2, 02);
     border-radius: 8px;
     border-top: solid 3px $color-black-08;
     border-left: solid 3px $color-black-08;
     border-right: solid 3px $color-black-01;
     border-bottom: solid 3px $color-black-01;
-    @include transitionMix(02, 0.3s);
 
     @media (min-width: 686px) {
       width: 80px;

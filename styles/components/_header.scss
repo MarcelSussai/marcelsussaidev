@@ -1,6 +1,6 @@
 
 .c-header {
-
+  @include displayFlex(center, center);
   background: $color-black-02;
   position: fixed;
   top: 0;
@@ -8,7 +8,6 @@
   width: 100vw;
   height: 86px;
   padding: 8px 0 6px 0;
-  @include displayFlex(center, center);
   box-shadow: 0 4px 8px rgba($color-black-01, 0.8);
   opacity: 0;
   animation: appear .4s cubic-bezier($cb-02) .1s forwards;
@@ -28,14 +27,11 @@
   .c-header-title {
     padding: 0 4px 0 4px;
     margin-top: -2px;
-    @include gradientBorder(1px);
-    border-left: none;
-    border-right: none;
+    @include gradientBorder(1px, true, false, true, false);
     @include displayFlex(center, center);
     flex-direction: column;
     opacity: 0;
     animation: showLogo .8s cubic-bezier($cb-15) .6s forwards;
-    // padding: 2px;
   }
 
   h1 {
@@ -57,10 +53,10 @@
   }
 
   .txt-span-desc {
+    @include font(0.94rem, 300, 1, 02);
     color: $color-yellow-04;
     display: block;
     margin-top: -2px;
-    @include font(0.94rem, 300, 1, 02);
   }
 
   .svg-logo-ms {
