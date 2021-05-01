@@ -153,9 +153,10 @@
   @include displayFlex(center, center);
   width: 100%;
   flex-direction: row;
-  border: 1px solid #161616;
-  border-image-source: linear-gradient(45deg, $color-blue-02, $color-green-02);
-  border-image-slice: 1;
+  // border: 1px solid #161616;
+  // border-image-source: linear-gradient(45deg, $color-blue-02, $color-green-02);
+  // border-image-slice: 1;
+
 
   @media (min-width: 686px) {
     width: 686px;
@@ -212,7 +213,11 @@
     }
 
   }
-
+  
+  @include gradientBorder(2px);
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 
