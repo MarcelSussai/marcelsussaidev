@@ -5,7 +5,11 @@ const OQueFaco = () => {
   return (
   <>
     <section className="c-sec">
+
       <OQueFacoSecHead />
+
+      
+
     </section>
   </>
 );

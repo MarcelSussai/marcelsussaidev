@@ -62,9 +62,9 @@ const OQueFacoSecHead = () => {
       <h2 ref={e_01} className={`h2-sec-head-title ${aniQ01 ? 'ani-appearByRight-03' : 'ani-appearByRightReversed-01' }`}>O que faço...</h2>
     </div>
 
-    <div ref={e_02} className={`c-sec-head ${aniQ02 ? 'ani-appear-02' : 'ani-appearReversed-01'}`}>
-      <div className={`c-sec-head-content ${aniQ02 ? 'ani-appear-03' : 'ani-appearReversed-01'}`}>
-        <h2 className={`c-h2-txt-sec ${aniQ02 ? 'ani-appearByScale-04' : 'ani-appearByScaleReversed-01'}`}>
+    <div ref={e_02} className={`c-sec-head ${aniQ02 ? 'ani-appear-02' : 'ani-appearReversed-02'}`}>
+      <div className={`c-sec-head-content ${aniQ02 ? 'ani-appear-03' : 'ani-appearReversed-02'}`}>
+        <h2 className={`c-h2-txt-sec ${aniQ02 ? 'ani-appearByScale-04' : 'ani-appearByScaleReversed-02'}`}>
           Sou
           <span className="mark-txt-color-blue"> capaz </span> 
           de fazer o
@@ -72,8 +72,8 @@ const OQueFacoSecHead = () => {
           Isso é ser
           <span className="mark-txt-color-blue"> full-stack</span>... 
         </h2>
-        <div className={`c-sec-head-content-img ${aniQ02 ? 'ani-appearByRight-01' : '.ani-appearByRightReversed-01' }`}>
-          <div className={`c-sec-head-img ${aniQ02 ? 'ani-appearByRight-02' : '.ani-appearByRightReversed-01' }`}>
+        <div className={`c-sec-head-content-img ${aniQ02 ? 'ani-appearByRight-01' : 'ani-appearByRightReversed-02' }`}>
+          <div className={`c-sec-head-img ${aniQ02 ? 'ani-appearByRight-02' : 'ani-appearByRightReversed-01' }`}>
             <img src="/programmingdev.svg" alt="Imagem de um desenho de um computador programando e um servidor cloud" className="svg-sec-head" />
           </div>
         </div>

@@ -128,44 +128,62 @@
 
 // ________________________________
 .ani-appear-01 {
+  opacity: 0;
   animation: appear .4s cubic-bezier($cb-02) .5s forwards;
 }
 .ani-appear-02 {
+  opacity: 0;
   animation: appear .4s cubic-bezier($cb-02) forwards;
 }
 .ani-appear-03 {
+  opacity: 0;
   animation: appear .4s cubic-bezier($cb-02) .4s forwards;
 }
 
 .ani-appearReversed-01 {
   animation: appearReversed .4s cubic-bezier($cb-02) forwards;
 }
+.ani-appearReversed-02 {
+  animation: appearReversed .4s cubic-bezier($cb-02) .8s forwards;
+}
+.ani-appearReversed-03 {
+  animation: appearReversed .4s cubic-bezier($cb-02) .9s forwards;
+}
 // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 // ________________________________
 .ani-appearByScale-01 {
+  opacity: 0;
   animation: appearByScale .4s cubic-bezier($cb-16) .6s forwards;
 }
 .ani-appearByScale-02 {
+  opacity: 0;
   animation: appearByScale .4s cubic-bezier($cb-10) .9s forwards;
 }
 .ani-appearByScale-03 {
+  opacity: 0;
   animation: appearByScale .4s cubic-bezier($cb-10) forwards;
 }
 .ani-appearByScale-04 {
+  opacity: 0;
   animation: appearByScale .4s cubic-bezier($cb-16) .5s forwards;
 }
 
 .ani-appearByScaleReversed-01 {
   animation: appearByScaleReversed .4s cubic-bezier($cb-10) forwards;
 }
+.ani-appearByScaleReversed-02 {
+  animation: appearByScaleReversed .4s cubic-bezier($cb-10) .6s forwards;
+}
 // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 // ________________________________
 .ani-appearByLeft-01 {
+  opacity: 0;
   animation: appearByLeft .4s cubic-bezier($cb-05) .8s forwards;
 }
 .ani-appearByLeft-02 {
+  opacity: 0;
   animation: appearByLeft .4s cubic-bezier($cb-05) forwards;
 }
 
@@ -176,6 +194,7 @@
 
 // ________________________________
 .ani-appearByBottom-01 {
+  opacity: 0;
   animation: appearByBottom .4s cubic-bezier($cb-05) .2s forwards;
 }
 
@@ -186,16 +205,23 @@
 
 // ________________________________
 .ani-appearByRight-01 {
+  opacity: 0;
   animation: appearByRight .4s cubic-bezier($cb-16) .6s forwards;
 }
 .ani-appearByRight-02 {
+  opacity: 0;
   animation: appearByRight .8s cubic-bezier($cb-16) .8s forwards;
 }
 .ani-appearByRight-03 {
+  opacity: 0;
   animation: appearByRight .8s cubic-bezier($cb-10) forwards;
 }
 
 .ani-appearByRightReversed-01 {
   animation: appearByRightReversed .8s cubic-bezier($cb-16) forwards;
 }
+.ani-appearByRightReversed-02 {
+  animation: appearByRightReversed .8s cubic-bezier($cb-16) .4s forwards;
+}
 // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
