@@ -6,9 +6,9 @@
   align-items: $aliIte;
 }
 
-@mixin gradientBorder($stroke) {
+@mixin gradientBorder($stroke, $colorBase: $color-yellow-04) {
 
-  border: $stroke solid #fff4d2;
+  border: $stroke solid $colorBase;
   border-image-source: linear-gradient(45deg, $color-blue-02, $color-green-02);
   border-image-slice: 1;
 
