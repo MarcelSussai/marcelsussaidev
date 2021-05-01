@@ -151,12 +151,14 @@
 
 .c-sec-head-content {
   @include displayFlex(center, center);
+  width: 100%;
   flex-direction: row;
-  @include gradientBorder(2px);
+  border: $stroke solid $color-yellow-04;
+  border-image-source: linear-gradient(45deg, $color-blue-02, $color-green-02);
+  border-image-slice: 1;
   border-top: none;
   border-left: none;
   border-right: none;
-  width: 100%;
 
   @media (min-width: 686px) {
     width: 686px;
