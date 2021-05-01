@@ -6,10 +6,32 @@
   align-items: $aliIte;
 }
 
-@mixin gradientBorder($stroke) {
+@mixin gradientBorder($stroke, $sides : "") {
+
   border: $stroke solid $color-yellow-04;
   border-image-source: linear-gradient(45deg, $color-blue-02, $color-green-02);
   border-image-slice: 1;
+
+  @if ($sides != "") {
+    @each $side in $sides {
+      @if ($side == 'top') {
+        border-#{$side}: none;
+      } 
+      @else if ($side == 'right') {
+        border-#{$side}: none;
+      } 
+      @else if ($side == 'bottom') {
+        border-#{$side}: none;
+      } 
+      @else if ($side == 'left') {
+        border-#{$side}: none;
+      }
+    }
+
+  }
+
+
+
 }
 
 @mixin font( $size, $weight, $lineHeight: 1.6, $font ) {

@@ -156,6 +156,7 @@
 
 .c-sec-head-content {
   @include displayFlex(center, center);
+  @include gradientBorder(2px, top left right);
   width: 100%;
   flex-direction: row;
   // border: 1px solid #161616;
@@ -219,11 +220,6 @@
 
   }
   @include gradientBorder(2px);
-  /* clean-css ignore:start */
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  /* clean-css ignore:end */
 }
 
 
