@@ -8,38 +8,34 @@
 
 @mixin gradientBorder($stroke, $t: false, $r: false, $b: false, $l: false) {
 
+
+  border: {
+    top: none;
+    right: none;
+    bottom: none;
+    left: none;
+  }
+
   @if $t == true {
     border: { 
       top: $stroke solid $color-yellow-04;
-      right: none;
-      bottom: none;
-      left: none;
     };
   }
 
   @if $r == true {
     border: { 
-      top: none;
       right: $stroke solid $color-yellow-04;
-      bottom: none;
-      left: none;
     };
   }
 
   @if $b == true {
     border: { 
-      top: none;
-      right: none;
       bottom: $stroke solid $color-yellow-04;
-      left: none;
     };
   }
-  
+
   @if $l == true {
     border: { 
-      top: none;
-      right: none;
-      bottom: none;
       left: $stroke solid $color-yellow-04;
     };
   }
