@@ -156,9 +156,14 @@
 
 .c-sec-head-content {
   @include displayFlex(center, center);
-  @include gradientBorder(2px, top left right);
+  @include gradientBorder(2px);
   width: 100%;
   flex-direction: row;
+  border: {
+    top: none;
+    right: none;
+    left: none;
+  }
   // border: 1px solid #161616;
   // border-image-source: linear-gradient(45deg, $color-blue-02, $color-green-02);
   // border-image-slice: 1;
