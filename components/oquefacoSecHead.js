@@ -20,10 +20,10 @@ const OQueFacoSecHead = () => {
 
     const scroll = (e) => {
       e.preventDefault();
-      let onAni = window.pageYOffset + (window.innerHeight * 3 / 4);
+      let onAni = window.pageYOffset + (window.innerHeight * 3 / 4) - 64;
 
       // ________________________________________________________________
-      let a_Calc_01 = e_01.current.offsetTop + e_01.current.offsetParent.offsetTop + 64;
+      let a_Calc_01 = e_01.current.offsetTop + e_01.current.offsetParent.offsetTop;
       let condition_01 = onAni >= a_Calc_01;
       setAniQ01(condition_01);
       // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
