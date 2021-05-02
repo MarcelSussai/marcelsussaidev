@@ -5,7 +5,7 @@
   bottom: 24px;
   z-index: 102;
   padding: 8px 40px 8px 8px;
-  background: $color-black-04;
+  background: darken($color-purple-01, 24);
   cursor: pointer;
   border-left: solid 3px $color-purple-04;
   border-top: solid 3px $color-purple-04;
@@ -33,7 +33,7 @@
   @include displayFlex(space-between, unset);
   @include transitionMix(16, 0.6s);
   flex-direction: column;
-  $size: 26px;
+  $size: 27px;
   width: $size;
   height: $size;
 
@@ -64,9 +64,9 @@
     }
 
     &.end {
-      align-self: flex-end;
       @include transitionMix(17, 0.6s);
       transform-origin: left;
+      align-self: flex-end;
     }
 
   }
@@ -86,7 +86,7 @@
   position: fixed;
   left: 0;
   bottom: -104px;
-  background: linear-gradient(90deg, rgba($color-blue-02, 0.4) 0%,  rgba($color-green-02, 0.4) 100%);
+  background: linear-gradient(90deg, rgba($color-blue-02, 0.6) 0%,  rgba($color-green-02, 0.6) 100%);
 
   @media (min-width: 686px) {
     position: relative;
@@ -116,14 +116,13 @@
   .link {
 
     @include displayFlex(space-around, center);
-    @include font(0.92rem, 400, 1.2, 02);
+    @include font(0.9rem, 400, 1.2, 02);
     @include transitionMix(02, 0.3s);
     flex-direction: column;
     background: $color-black-05;
     width: 23vw;
     height: 88px;
     padding: 8px 8px 4px 8px;
-    line-height: 1.8;
     text-align: center;
     color: $color-yellow-04;
     text-decoration: none;
@@ -160,6 +159,7 @@
     $size: 28px;
     width: $size;
     height: $size;
+    margin: 0 0 6px 0;
   }
 
 }

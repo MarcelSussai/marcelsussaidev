@@ -8,7 +8,6 @@
 
 @mixin gradientBorder($stroke, $t: false, $r: false, $b: false, $l: false) {
 
-
   border: {
     top: none;
     right: none;
@@ -45,7 +44,6 @@
 
 
   }
-
 
 @mixin font( $size, $weight, $lineHeight: 1.6, $font ) {
   @if $font == 01 {
