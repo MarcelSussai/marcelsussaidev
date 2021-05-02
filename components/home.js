@@ -5,24 +5,19 @@ import HomeSecHead from './homeSecHead';
 
 const Home = () => {
 
-  // ________________________________
   const e_01 = useRef(null);
   const e_02 = useRef(null);
   const e_03 = useRef(null);
-  // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-  // ________________________________
   const [ani_01, setAni_01] = useState(false);
   const [ani_02, setAni_02] = useState(false);
   const [ani_03, setAni_03] = useState(false);
-  // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-  // ________________________________
   useEffect(() => {
 
     const scroll = (e) => {
       e.preventDefault();
-      let onAni = window.pageYOffset + (window.innerHeight * 3 / 4) - 32;
+      let onAni = window.pageYOffset + (window.innerHeight * 3 / 4) - 64;
       (onAni > e_01.current.offsetTop) ? setAni_01(true) : setAni_01(false);
       (onAni > e_02.current.offsetTop) ? setAni_02(true) : setAni_02(false);
       (onAni > e_03.current.offsetTop) ? setAni_03(true) : setAni_03(false);
@@ -35,7 +30,6 @@ const Home = () => {
       window.removeEventListener("scroll", scroll, false);
     }
   }, []);
-  // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 
   return (

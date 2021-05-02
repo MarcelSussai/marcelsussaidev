@@ -53,6 +53,17 @@
   }
 }
 
+@keyframes appearByTopReversed {
+  from {
+    transform: translate3d(0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+}
+
 @keyframes appearByBottom {
   from {
     transform: translate3d(0, 100%, 0);
@@ -189,6 +200,21 @@
 
 .ani-appearByLeftReversed-01 {
   animation: appearByLeftReversed .4s cubic-bezier($cb-05) forwards;
+}
+// ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+// ________________________________
+.ani-appearByTop-01 {
+  opacity: 0;
+  animation: appearByTop .4s cubic-bezier($cb-07) .2s forwards;
+}
+.ani-appearByTop-02 {
+  opacity: 0;
+  animation: appearByTop .4s cubic-bezier($cb-05) .3s forwards;
+}
+
+.ani-appearByTopReversed-01 {
+  animation: appearByTopReversed .4s cubic-bezier($cb-06) forwards;
 }
 // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 

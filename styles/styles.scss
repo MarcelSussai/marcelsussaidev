@@ -24,4 +24,9 @@ e assim vai ...
 @import './components/_header';
 @import './components/_navmenu';
 @import './components/_home';
+@import './components/_slider';
 
+.main {
+  @include displayFlex(center, center);
+  flex-direction: column;
+}

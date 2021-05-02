@@ -5,7 +5,7 @@
   transform: translateY(86px);
   overflow-x: hidden;
   margin-bottom: 64px;
-  
+
   .c-art-home {
 
     @media (min-width: 686px) {
@@ -17,7 +17,7 @@
     }
 
     .c-piece-art-txt {
-      margin-top: 72px;
+      margin-top: 64px;
     }
 
     .h3-txt-art-title {
@@ -25,7 +25,7 @@
       display: inline-block;
       color: $color-black-01;
       padding: 4px 8px 4px 8px;
-      margin: 0 0 8px 0;
+      margin: 0 0 4px 0;
       box-shadow: 9px 2px 16px rgba($color-black-10, .4);
       background: linear-gradient(45deg, rgba($color-blue-04, .3), rgba($color-green-04, .3));
       opacity: 0;
@@ -79,8 +79,6 @@
   }
 
 }
-
-
 
 .c-sec-head {
   @include displayFlex(center);
@@ -141,10 +139,10 @@
       font-size: 64px;
       height: 112px;
     }
+
   }
 
 }
-
 
 .c-sec-head-content {
   @include displayFlex(center, center);
@@ -166,13 +164,14 @@
     padding: 16px;
     
     @media (min-width: 686px) {
-      font-size: 2.5rem;
-      padding: 64px 16px 16px 16px;
+      font-size: 2.8rem;
+      padding: 40px 16px 16px 16px;
     }
 
     @media (min-width: 808px) {
-      font-size: 3rem;
+      font-size: 3.2rem;
     }
+
 
   }
 
@@ -207,19 +206,52 @@
     }
 
   }
+
+}
+
+.p-txt-comment {
+  @include font(4.6vw, 700, 1.4, 02);
+  @include gradientBorder(2px, false, false, true, false);
+  @include transitionMix(01, .6s);
+  color: $color-black-04;
+  padding: 8px;
+  text-align: center;
+  z-index: -1;
+
+  @media (min-width: 686px) {
+    font-size: 1.16rem;
+    width: 686px;
+  }
+  @media (min-width: 808px) {
+    font-size: 1.24rem;
+    width: 760px;
+  }
+
 }
 
 
+
+.cancel-padding {
+  padding: 0 !important;
+}
 
 .mark-txt-color-blue {
   color: $color-blue-01;
 }
-
+.mark-txt-color-blue2 {
+  color: $color-blue-02;
+}
 
 .mark-txt-color-green {
   color: $color-green-01;
 }
+.mark-txt-color-green2 {
+  color: $color-green-02;
+}
 
+.mark-txt-color-yellow {
+  color: $color-yellow-01;
+}
 
 .mark-txt-bold {
   font-weight: 800;

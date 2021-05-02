@@ -1,11 +1,11 @@
 .c-btn-menu {
-  @include transitionMix(11, 0.6s);
+  @include transitionMix(11, .6s);
   position: fixed;
   right: 0px;
   bottom: 24px;
   z-index: 102;
   padding: 8px 40px 8px 8px;
-  background: darken($color-purple-01, 24);
+  background: linear-gradient(90deg, $color-black-03 0%, $color-black-03 80%, rgba(darken($color-purple-01, 16), .9) 100%);
   cursor: pointer;
   border-left: solid 3px $color-purple-04;
   border-top: solid 3px $color-purple-04;
@@ -17,10 +17,10 @@
   
   &.opened {
     bottom: 112px;
-    border-left: solid 1px $color-red-03;
-    border-top: solid 1px $color-red-03;
-    border-bottom: solid 1px $color-red-03;
-    background-color:  darken( rgba($color-black-01, .9), 20);
+    border-left: solid 2px $color-red-03;
+    border-top: solid 2px $color-red-03;
+    border-bottom: solid 2px $color-red-01;
+    background: linear-gradient(90deg, $color-black-03 0%, rgba($color-black-03, .8) 80%, rgba(darken($color-red-01, 16), .8) 100%);
   }
   
   @media (min-width: 686px) {
@@ -28,6 +28,7 @@
   }
 
 }
+
 
 .btn-menu {
   @include displayFlex(space-between, unset);
@@ -48,7 +49,7 @@
   }
 
   .line-menu {
-    background: $color-yellow-04;
+    background: $color-yellow-03;
     border-radius: 6px;
     width: 100%;
     height: 3px;

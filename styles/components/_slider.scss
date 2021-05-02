@@ -1,0 +1,73 @@
+
+.c-art-slider::-webkit-scrollbar {
+  display: none;
+}
+.c-art-slider {
+  @include transitionMix(04, .6s);
+  @include gradientBorder(2px, false, false, true, false);
+  display: flex;
+  flex-direction: row;
+  width: 100vw; // Este valor é muito importante para funcionar o slider
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  background: linear-gradient(45deg, $color-blue-04, $color-green-04);
+
+}
+
+.c-item-slide {
+  @include displayFlex(center, center);
+  @include transitionMix(06, .6s);
+  scroll-snap-align: center;
+  width: 100vw;
+  padding: 16px 16px 40px 16px;
+
+  .c-card-slide {
+    @include displayFlex(center, center);
+    width: 100vw; // Este valor é muito importante para funcionar o slider
+    height: 100%;
+    border-radius: 16px;
+
+    .h3-card-title-slide {
+      @include font(8vw, 800, 1.4, 01);
+      text-align: center;
+      color: $color-yellow-03;
+      padding: 8px;
+    }
+
+    .c-img-slide {
+      @include displayFlex(center, center);
+      background: $color-black-04;
+      padding: 16px;
+
+      .svg-slide {
+        height: 40vw;
+
+      }
+
+    }
+
+    .p-txt-card-slide {
+      @include font(5vw, 300, 1.5, 02);
+      padding: 12px;
+      color: $color-black-13;
+
+    }
+
+  }
+
+}
+
+.card-slide {
+  border-top: solid 2px $color-yellow-03;
+  border-right: solid 2px $color-yellow-01;
+  border-bottom: solid 2px $color-yellow-01;
+  border-left: solid 2px $color-yellow-03;
+  width: 98%;
+  height: 100%;
+  border-radius: 16px;
+  background: $color-black-02;
+  box-shadow: 0 0 16px rgba($color-yellow-03, .8);
+}
