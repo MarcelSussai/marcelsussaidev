@@ -1,9 +1,20 @@
+.c-oquefaco-slider {
+  position: relative;
+  z-index: -20;
+  @media (min-width: 686px) {
+    width: 686px;
+  }
+  @media (min-width: 808px) {
+    width: 760px;
+  }
+}
+
 
 .c-art-slider::-webkit-scrollbar {
   display: none;
 }
 .c-art-slider {
-  @include transitionMix(04, .6s);
+  @include transitionMix(06, .9s);
   @include gradientBorder(2px, false, false, true, false);
   display: flex;
   flex-direction: row;
@@ -15,6 +26,12 @@
   scrollbar-width: none;
   background: linear-gradient(45deg, $color-blue-04, $color-green-04);
 
+  @media (min-width: 686px) {
+    width: 686px;
+  }
+  @media (min-width: 808px) {
+    width: 760px;
+  }
 }
 
 .c-item-slide {
@@ -24,17 +41,33 @@
   width: 100vw;
   padding: 16px 16px 40px 16px;
 
+  @media (min-width: 686px) {
+    padding: 16px 16px 56px 16px;
+  }
+
   .c-card-slide {
     @include displayFlex(center, center);
     width: 100vw; // Este valor é muito importante para funcionar o slider
     height: 100%;
     border-radius: 16px;
 
+    @media (min-width: 686px) {
+      width: 686px;
+    }
+    @media (min-width: 808px) {
+      width: 760px;
+    }
+
     .h3-card-title-slide {
       @include font(8vw, 800, 1.4, 01);
       text-align: center;
       color: $color-yellow-03;
       padding: 8px;
+
+      @media (min-width: 686px) {
+        font-size: 2.5rem;
+      }
+
     }
 
     .c-img-slide {
@@ -45,14 +78,26 @@
       .svg-slide {
         height: 40vw;
 
+        @media (min-width: 686px) {
+          height: 12rem;
+        }
+
       }
 
     }
 
     .p-txt-card-slide {
-      @include font(5vw, 300, 1.5, 02);
+      @include font(4.46vw, 300, 1.48, 02);
       padding: 12px;
       color: $color-black-13;
+
+      @media (min-width: 425px) {
+        font-size: 4vw;
+      }
+      
+      @media (min-width: 686px) {
+        font-size: 1.2rem;
+      }
 
     }
 
@@ -61,13 +106,155 @@
 }
 
 .card-slide {
-  border-top: solid 2px $color-yellow-03;
-  border-right: solid 2px $color-yellow-01;
-  border-bottom: solid 2px $color-yellow-01;
-  border-left: solid 2px $color-yellow-03;
+  border-top: solid 3px $color-yellow-03;
+  border-right: solid 3px $color-yellow-01;
+  border-bottom: solid 3px $color-yellow-01;
+  border-left: solid 3px $color-yellow-03;
   width: 98%;
   height: 100%;
   border-radius: 16px;
   background: $color-black-02;
   box-shadow: 0 0 16px rgba($color-yellow-03, .8);
+
+  @media (min-width: 686px) {
+    width: 64%;
+  }
+
+}
+
+.c-slider-nav {
+  // position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+
+
+  .slider-btn-prev {
+    border-top-right-radius: 16%;
+    border-bottom-right-radius: 16%;
+    border-top: solid 1px $color-purple-04;
+    border-right: solid 1px $color-purple-01;
+    border-bottom: solid 1px $color-purple-01;
+    border-left: none;
+    left: 0;
+    padding-right: 6px;
+    
+    @media (min-width: 686px) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border: none;
+    }
+  }
+
+  .slider-btn-next {
+    border-top-left-radius: 16%;
+    border-bottom-left-radius: 16%;
+    border-top: solid 1px $color-purple-04;
+    border-left: solid 1px $color-purple-04;
+    border-bottom: solid 1px $color-purple-01;
+    right: 0;
+    padding-left: 6px;
+    
+    @media (min-width: 686px) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border: none;
+    }
+  }
+
+}
+
+.slider-btns-prevnext {
+  @include font(8.8vw, 500, 1.6, 02);
+  @include displayFlex(center, center);
+  @include transitionMix(12, .6s);
+  position: absolute;
+  bottom: 62%;
+  color: $color-purple-04;
+  background: rgba($color-black-02, .96);
+  text-decoration: none;
+  width: 56px;
+  cursor: pointer;
+
+  @media (min-width: 504px) {
+    height: 64px;
+  }
+
+  @media (min-width: 686px) {
+    bottom: 1px;
+    height: 100%;
+    font-size: 3rem;
+    background: rgba($color-black-02, .8);
+  }
+
+  &:hover {
+    box-shadow: 0 0 16px $color-purple-03;
+    background: rgba($color-black-01, .9);
+  }
+
+}
+
+.c-slider-btns-items {
+  @include displayFlex(space-around, center);
+  position: absolute;
+  bottom: 0;
+  left: 18%;
+  width: 64%;
+  padding: 12px;
+
+  .slider-btn-item {
+    @include transitionMix(12, .6s);
+    border-radius: 50%;
+    border-top: solid 1px $color-purple-04;
+    border-right: solid 1px $color-purple-01;
+    border-bottom: solid 1px $color-purple-01;
+    border-left: solid 1px $color-purple-04;
+    $sizeItem: 7vw;
+    width: $sizeItem;
+    height: $sizeItem;
+    background: $color-black-06;
+    cursor: pointer;
+
+    @media (min-width: 375px) {
+      $sizeItem: 6vw;
+      width: $sizeItem;
+      height: $sizeItem;
+    }
+    @media (min-width: 425px) {
+      $sizeItem: 5.6vw;
+      width: $sizeItem;
+      height: $sizeItem;
+    }
+    @media (min-width: 686px) {
+      $sizeItem: 1.8rem;
+      width: $sizeItem;
+      height: $sizeItem;
+
+      &:hover {
+        box-shadow: 0 0 16px $color-purple-03;
+        background: rgba($color-black-01, .9);
+      }
+
+    }
+
+  }
+
+  .slider-btn-item-mark {
+    border: none;
+    border-bottom: solid 7vw $color-yellow-03;
+    box-shadow: 0 0 16px $color-yellow-03;
+
+    @media (min-width: 375px) {
+      border-bottom: solid 6vw $color-yellow-03;
+    }
+    @media (min-width: 425px) {
+      border-bottom: solid 5.6vw $color-yellow-03;
+    }
+    @media (min-width: 686px) {
+      border-bottom: solid 1.8rem $color-yellow-03;
+    }
+
+  }
 }

@@ -137,6 +137,7 @@
   }
 }
 
+
 // ________________________________
 .ani-appear-01 {
   opacity: 0;
@@ -161,6 +162,8 @@
   animation: appearReversed .4s cubic-bezier($cb-02) .9s forwards;
 }
 // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+
 
 // ________________________________
 .ani-appearByScale-01 {
@@ -188,6 +191,8 @@
 }
 // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
+
+
 // ________________________________
 .ani-appearByLeft-01 {
   opacity: 0;
@@ -203,6 +208,8 @@
 }
 // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
+
+
 // ________________________________
 .ani-appearByTop-01 {
   opacity: 0;
@@ -212,11 +219,20 @@
   opacity: 0;
   animation: appearByTop .4s cubic-bezier($cb-05) .3s forwards;
 }
+.ani-appearByTop-03 {
+  opacity: 0;
+  animation: appearByTop .6s cubic-bezier($cb-01) .4s forwards;
+}
 
 .ani-appearByTopReversed-01 {
   animation: appearByTopReversed .4s cubic-bezier($cb-06) forwards;
 }
+.ani-appearByTopReversed-02 {
+  animation: appearByTopReversed .4s cubic-bezier($cb-01) forwards;
+}
 // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+
 
 // ________________________________
 .ani-appearByBottom-01 {
@@ -228,6 +244,8 @@
   animation: appearByBottomReversed .4s cubic-bezier($cb-06) forwards;
 }
 // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+
 
 // ________________________________
 .ani-appearByRight-01 {
