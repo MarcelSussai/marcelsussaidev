@@ -50,6 +50,10 @@ const OQueFacoSlider = () => {
   };
 
   useEffect(() => {
+    setState_item_1(false);
+    setState_item_2(false);
+    setState_item_3(false);
+    setState_item_4(false);
     const scroll = (e) => {
       e.preventDefault();
       let onAni = window.pageYOffset + (window.innerHeight * 3 / 4) - 32;
