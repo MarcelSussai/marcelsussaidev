@@ -58,7 +58,6 @@ const OQueFacoSlider = () => {
                   ref_Art_Slider_Container.current.offsetParent.offsetParent.offsetTop + 48;
 
       let condition_1 = onAni >= Calc;
-      console.log(condition_1);
       setAni_1(condition_1);
     }
 
