@@ -277,6 +277,6 @@
 }
 .anima-wp-txt {
   @include transitionMix(01, .4s, max-height);
-  max-height: 800px;
+  max-height: 1000px;
   overflow-y: hidden;
 }
