@@ -10,9 +10,9 @@ const OQueFacoSlider = () => {
   const ref_item_Slider_4                 = useRef(null);
 
   const [state_item_1, setState_item_1]   = useState(true);
-  const [state_item_2, setState_item_2]   = useState(true);
-  const [state_item_3, setState_item_3]   = useState(true);
-  const [state_item_4, setState_item_4]   = useState(true);
+  const [state_item_2, setState_item_2]   = useState(false);
+  const [state_item_3, setState_item_3]   = useState(false);
+  const [state_item_4, setState_item_4]   = useState(false);
   
   const [ani_1, setAni_1]   = useState(Boolean);
 
@@ -50,10 +50,11 @@ const OQueFacoSlider = () => {
   };
 
   useEffect(() => {
-    setState_item_1(false);
+    setState_item_1(true);
     setState_item_2(false);
     setState_item_3(false);
     setState_item_4(false);
+
     const scroll = (e) => {
       e.preventDefault();
       let onAni = window.pageYOffset + (window.innerHeight * 3 / 4) - 32;
@@ -106,7 +107,7 @@ const OQueFacoSlider = () => {
     ref_Art_Slider_Container.current.addEventListener('scroll', scrollPosition, false);
     return () => {
       window.removeEventListener("scroll", scroll, false);
-      ref_Art_Slider_Container.current.removeEventListener('scroll', scrollPosition, false)
+      ref_Art_Slider_Container.current.removeEventListener('scroll', scrollPosition, false);
     };
   }, [])
 

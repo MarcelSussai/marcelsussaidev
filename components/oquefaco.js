@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import OQueFacoWorkProcess from './oquefacoWorkProcess';
 import OQueFacoSecHead from "./oquefacoSecHead";
 import OQueFacoSlider from './oquefacoSlider';
 
@@ -38,6 +39,8 @@ const OQueFaco = () => {
       </p>
 
       <OQueFacoSlider />
+
+      <OQueFacoWorkProcess />
 
     </section>
   </>

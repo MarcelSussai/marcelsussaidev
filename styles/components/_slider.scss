@@ -9,7 +9,6 @@
   }
 }
 
-
 .c-art-slider::-webkit-scrollbar {
   display: none;
 }
@@ -42,6 +41,7 @@
   padding: 16px 16px 40px 16px;
 
   @media (min-width: 686px) {
+    width: 100%;
     padding: 16px 16px 56px 16px;
   }
 
