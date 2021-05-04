@@ -245,7 +245,7 @@
     @include displayFlex(center, flex-end);
     flex-direction: column;
     margin: 0 0 16px 0;
-    overflow: hidden;
+    // overflow: hidden;
 
     .h4-wp-txt-item-title {
       @include font(4.5vw, 800, 1.5, 02);
@@ -272,10 +272,7 @@
     .c-wp-content-txt {
       @include font(4.4vw, 500, 1.6, 02);
       @include displayFlex(center, flex-end);
-      @include transitionMix(12, .4s);
       flex-direction: column;
-      height: 0px;
-      overflow: hidden;
       background: rgba($color-purple-04, .2);
 
       @media (min-width: 686px) {
@@ -344,10 +341,6 @@
 
   }
 
-}
-
-.anima-wp-txt {
-  height: 100%;
 }
 
 

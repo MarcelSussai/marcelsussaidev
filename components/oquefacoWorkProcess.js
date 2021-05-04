@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 
 const OQueFacoWorkProcess = () => {
@@ -10,66 +10,59 @@ const OQueFacoWorkProcess = () => {
   const [anima_wp_05, setAnima_wp_05] = useState(false);
   const [anima_wp_06, setAnima_wp_06] = useState(false);
 
+  const obj_1 = useRef(null);
+  const obj_2 = useRef(null);
+  const obj_3 = useRef(null);
+  const obj_4 = useRef(null);
+  const obj_5 = useRef(null);
+  const obj_6 = useRef(null);
+
   const handle_wp_1 = (e) => {
     e.preventDefault();
-    console.log('entrou aqui');
-    setAnima_wp_01(true);
-    setAnima_wp_02(false);
-    setAnima_wp_03(false);
-    setAnima_wp_04(false);
-    setAnima_wp_05(false);
-    setAnima_wp_06(false);
+    setAnima_wp_01(!anima_wp_01);
+    console.log('1 - ', anima_wp_01);
   }
 
   const handle_wp_2 = (e) => {
     e.preventDefault();
-    setAnima_wp_01(false);
-    setAnima_wp_02(true);
-    setAnima_wp_03(false);
-    setAnima_wp_04(false);
-    setAnima_wp_05(false);
-    setAnima_wp_06(false);
+    setAnima_wp_02(!anima_wp_02);
+    console.log('2 - ', anima_wp_02);
   }
 
   const handle_wp_3 = (e) => {
     e.preventDefault();
-    setAnima_wp_01(false);
-    setAnima_wp_02(false);
-    setAnima_wp_03(true);
-    setAnima_wp_04(false);
-    setAnima_wp_05(false);
-    setAnima_wp_06(false);
+    setAnima_wp_03(!anima_wp_03);
+    console.log('3 - ', anima_wp_03);
   }
 
   const handle_wp_4 = (e) => {
     e.preventDefault();
-    setAnima_wp_01(false);
-    setAnima_wp_02(false);
-    setAnima_wp_03(false);
-    setAnima_wp_04(true);
-    setAnima_wp_05(false);
-    setAnima_wp_06(false);
+    setAnima_wp_04(!anima_wp_04);
+    console.log('4 - ', anima_wp_04);
   }
 
   const handle_wp_5 = (e) => {
     e.preventDefault();
-    setAnima_wp_01(false);
-    setAnima_wp_02(false);
-    setAnima_wp_03(false);
-    setAnima_wp_04(false);
     setAnima_wp_05(!anima_wp_05);
-    setAnima_wp_06(false);
+    console.log('5 - ', anima_wp_05);
   }
 
   const handle_wp_6 = (e) => {
     e.preventDefault();
+    setAnima_wp_06(!anima_wp_06);
+    console.log('6 - ', anima_wp_06);
+  }
+
+  useEffect(() => {
     setAnima_wp_01(false);
     setAnima_wp_02(false);
     setAnima_wp_03(false);
     setAnima_wp_04(false);
     setAnima_wp_05(false);
-    setAnima_wp_06(!anima_wp_06);
-  }
+    setAnima_wp_06(false);
+    return {
+    }
+  }, []);
 
   return (
   <>
@@ -90,15 +83,14 @@ const OQueFacoWorkProcess = () => {
 
 
       <div className="c-wp">
-
-        <div className="c-wp-item">
+        <div ref={obj_1} className="c-wp-item">
 
           <h4 className="h4-wp-txt-item-title">
             <span className="wp-txt-mark">1º</span>
             Conhecendo suas necessidades
           </h4>
 
-          <div className={`c-wp-content-txt ${anima_wp_01 ? 'anima-wp-txt' : ''}`}>
+          <div className={`c-wp-content-txt ${anima_wp_01 ? 'anima-wp-txt' : 'anima-wp-txt-false'}`}>
             <p className="p-wp-txt-content">
               Primeiramente, entramos em contato(por email, whasapp, etc), 
               E conversamos, faço perguntas pertinentes para eu entender adequadamente
@@ -131,13 +123,12 @@ const OQueFacoWorkProcess = () => {
 
 
         <div className="c-wp-item">
-
           <h4 className="h4-wp-txt-item-title">
             <span className="wp-txt-mark">2º</span>
             Design e protótipos
           </h4>
 
-          <div  className={`c-wp-content-txt ${anima_wp_02 ? 'anima-wp-txt' : ''}`}>
+          <div className={`c-wp-content-txt ${anima_wp_02 ? 'anima-wp-txt' : 'anima-wp-txt-false'}`}>
             <p className="p-wp-txt-content">  
               Com uma idéia clara das necessidades e objetivos, vou ao desenvolvimento dos protótipos
               para poder dar uma idéia geral a você de como ficará! se não possuir um design eu crio um
@@ -160,13 +151,12 @@ const OQueFacoWorkProcess = () => {
 
 
         <div className="c-wp-item">
-
           <h4 className="h4-wp-txt-item-title">
             <span className="wp-txt-mark">3º</span>
             Desenvolvendo de fato!
           </h4>
 
-          <div className="c-wp-content-txt">
+          <div className={`c-wp-content-txt ${anima_wp_03 ? 'anima-wp-txt' : 'anima-wp-txt-false'}`}>
             <p className="p-wp-txt-content">  
               Com o design pronto e aprovado, começo o desenvolvimento do código, 
               e escolho as tecnologias que serão usadas, no caso de sites, 
@@ -205,7 +195,7 @@ const OQueFacoWorkProcess = () => {
             Testes e sua análise!
           </h4>
 
-          <div className="c-wp-content-txt">
+          <div className={`c-wp-content-txt ${anima_wp_04 ? 'anima-wp-txt' : 'anima-wp-txt-false'}`}>
             <p className="p-wp-txt-content"> 
               Nessa etapa de desenvolvimento, depois de tudo programado, 
               vem a fase de testes e então coloco a sua disposição 
@@ -233,7 +223,7 @@ const OQueFacoWorkProcess = () => {
             Deploy e configuração!
           </h4>
 
-          <div className="c-wp-content-txt">
+          <div className={`c-wp-content-txt ${anima_wp_05 ? 'anima-wp-txt' : 'anima-wp-txt-false'}`}>
             <p className="p-wp-txt-content">
             Quando finalmente aprovado e pago a ultima parcela, 
             faço o deploy(termo usado pra quando vamos "subir" o site/webApp na internet), 
@@ -260,7 +250,7 @@ const OQueFacoWorkProcess = () => {
             3 meses de suporte gratuito!
           </h4>
 
-          <div className="c-wp-content-txt">
+          <div className={`c-wp-content-txt ${anima_wp_06 ? 'anima-wp-txt' : 'anima-wp-txt-false'}`}>
             <p className="p-wp-txt-content">
             Durante 3 meses caso o site precise de uma manutenção 
             das funcionalidades entregues, estarei a disposição para dar suporte!
