@@ -132,6 +132,7 @@
     border-left: solid 3px $color-black-08;
     border-right: solid 3px $color-black-01;
     border-bottom: solid 3px $color-black-01;
+    box-shadow: inset -2px -2px 16px rgba($color-black-01, .9);
 
     @media (min-width: 686px) {
       width: 80px;
