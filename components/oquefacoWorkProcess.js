@@ -10,12 +10,14 @@ const OQueFacoWorkProcess = () => {
   const [anima_wp_05, setAnima_wp_05] = useState(false);
   const [anima_wp_06, setAnima_wp_06] = useState(false);
 
-  const obj_1 = useRef(null);
-  const obj_2 = useRef(null);
-  const obj_3 = useRef(null);
-  const obj_4 = useRef(null);
-  const obj_5 = useRef(null);
-  const obj_6 = useRef(null);
+  
+  const [ani_01, setAni_01] = useState(false);
+  const [ani_02, setAni_02] = useState(false);
+  const [ani_03, setAni_03] = useState(false);
+
+  const el_01 = useRef(null);
+  const el_02 = useRef(null);
+  const el_03 = useRef(null);
 
   const handle_wp_1 = (e) => {
     e.preventDefault();
@@ -60,7 +62,29 @@ const OQueFacoWorkProcess = () => {
     setAnima_wp_04(false);
     setAnima_wp_05(false);
     setAnima_wp_06(false);
-    return {
+
+    const scroll = (e) => {
+      e.preventDefault();
+      let onAni = window.pageYOffset + (window.innerHeight * 3 / 4) - 32;
+
+      let a_Calc_01 = el_01.current.offsetTop + el_01.current.offsetParent.offsetTop;
+      let condition_01 = onAni >= a_Calc_01;
+      setAni_01(condition_01);
+
+      let a_Calc_02 = el_02.current.offsetTop + el_02.current.offsetParent.offsetTop;
+      let condition_02 = onAni >= a_Calc_02;
+      setAni_02(condition_02);
+      
+      let a_Calc_03 = el_03.current.offsetTop + el_03.current.offsetParent.offsetTop;
+      let condition_03 = onAni >= a_Calc_03;
+      setAni_03(condition_03);
+
+    }
+
+    window.addEventListener("scroll", scroll, false);
+    return  () => {
+      window.removeEventListener("scroll", scroll, false);
+
     }
   }, []);
 
@@ -70,8 +94,8 @@ const OQueFacoWorkProcess = () => {
     <article className="c-art-home">
 
       <div className="c-piece-art-txt">
-        <h3 className="h3-txt-art-title ani-appearByLeft-01">Processo de trabalho...</h3>
-        <p className="p-txt-art-piece ani-appearByScale-02">
+        <h3 ref={el_01} className={`h3-txt-art-title ${ani_01 ? 'ani-appearByLeft-02' : 'ani-appearByLeftReversed-01' }`}>Processo de trabalho...</h3>
+        <p ref={el_02} className={`p-txt-art-piece ${ani_02 ? 'ani-appearByScale-03' : 'ani-appearByScaleReversed-01' }`}>
           Eu <span className="mark-txt-color-green mark-txt-bold"> trabalho remotamente</span>,
           não apenas em função da pandemia, eu sempre quis trabalhar remotamente e agora ainda mais, 
           graças a internet, no desenvolvimento de sites, aplicativos, etc.,  
@@ -82,8 +106,11 @@ const OQueFacoWorkProcess = () => {
       </div>
 
 
-      <div className="c-wp">
-        <div ref={obj_1} className="c-wp-item">
+      <div ref={el_03} className="c-wp">
+
+
+
+        <div className={`c-wp-item ${ani_03 ? 'ani-appearByRight-04' : 'ani-appearByRightReversed-01'}`}>
 
           <h4 className="h4-wp-txt-item-title">
             <span className="wp-txt-mark">1º</span>
@@ -110,19 +137,19 @@ const OQueFacoWorkProcess = () => {
           </div>
 
           <div onClick={handle_wp_1} className="c-wp-item-footer">
-            <p className="p-wp-footer-txt">
+            <p className={`p-wp-footer-txt ${anima_wp_01 ? 'p-wp-footer-txt-mark' : ''}`}>
               mostrar / ocultar ...
             </p>
             <div className="wp-sign">
-              <div className="wp-sign-item-1">   </div>
-              <div className="wp-sign-item-2">   </div>
+              <div className={`wp-sign-item-1 ${anima_wp_01 ? 'wp-sign-item-1-mark' : ''}`}>   </div>
+              <div className={`wp-sign-item-2 ${anima_wp_01 ? 'wp-sign-item-2-mark' : ''}`}>   </div>
             </div>
           </div>
         </div>
 
 
 
-        <div className="c-wp-item">
+        <div className={`c-wp-item ${ani_03 ? 'ani-appearByRight-05' : 'ani-appearByRightReversed-01'}`}>
           <h4 className="h4-wp-txt-item-title">
             <span className="wp-txt-mark">2º</span>
             Design e protótipos
@@ -138,19 +165,19 @@ const OQueFacoWorkProcess = () => {
           </div>
 
           <div onClick={handle_wp_2} className="c-wp-item-footer">
-            <p className="p-wp-footer-txt">
+            <p className={`p-wp-footer-txt ${anima_wp_02 ? 'p-wp-footer-txt-mark' : ''}`}>
               mostrar / ocultar ...
             </p>
             <div className="wp-sign">
-              <div className="wp-sign-item-1">   </div>
-              <div className="wp-sign-item-2">   </div>
+              <div className={`wp-sign-item-1 ${anima_wp_02 ? 'wp-sign-item-1-mark' : ''}`}>   </div>
+              <div className={`wp-sign-item-2 ${anima_wp_02 ? 'wp-sign-item-2-mark' : ''}`}>   </div>
             </div>
           </div>
         </div>
 
 
 
-        <div className="c-wp-item">
+        <div className={`c-wp-item ${ani_03 ? 'ani-appearByRight-06' : 'ani-appearByRightReversed-01'}`}>
           <h4 className="h4-wp-txt-item-title">
             <span className="wp-txt-mark">3º</span>
             Desenvolvendo de fato!
@@ -177,19 +204,19 @@ const OQueFacoWorkProcess = () => {
           </div>
 
           <div onClick={handle_wp_3} className="c-wp-item-footer">
-            <p className="p-wp-footer-txt">
+            <p className={`p-wp-footer-txt ${anima_wp_03 ? 'p-wp-footer-txt-mark' : ''}`}>
               mostrar / ocultar ...
             </p>
             <div className="wp-sign">
-              <div className="wp-sign-item-1">   </div>
-              <div className="wp-sign-item-2">   </div>
+              <div className={`wp-sign-item-1 ${anima_wp_03 ? 'wp-sign-item-1-mark' : ''}`}>   </div>
+              <div className={`wp-sign-item-2 ${anima_wp_03 ? 'wp-sign-item-2-mark' : ''}`}>   </div>
             </div>
           </div>
         </div>
 
 
 
-        <div className="c-wp-item">
+        <div className={`c-wp-item ${ani_03 ? 'ani-appearByRight-07' : 'ani-appearByRightReversed-01'}`}>
           <h4 className="h4-wp-txt-item-title">
             <span className="wp-txt-mark">4º</span>
             Testes e sua análise!
@@ -205,19 +232,19 @@ const OQueFacoWorkProcess = () => {
           </div>
 
           <div onClick={handle_wp_4} className="c-wp-item-footer">
-            <p className="p-wp-footer-txt">
+            <p className={`p-wp-footer-txt ${anima_wp_04 ? 'p-wp-footer-txt-mark' : ''}`}>
               mostrar / ocultar ...
             </p>
             <div className="wp-sign">
-              <div className="wp-sign-item-1">   </div>
-              <div className="wp-sign-item-2">   </div>
+              <div className={`wp-sign-item-1 ${anima_wp_04 ? 'wp-sign-item-1-mark' : ''}`}>   </div>
+              <div className={`wp-sign-item-2 ${anima_wp_04 ? 'wp-sign-item-2-mark' : ''}`}>   </div>
             </div>
           </div>
         </div>
 
 
 
-        <div className="c-wp-item">
+        <div className={`c-wp-item ${ani_03 ? 'ani-appearByRight-08' : 'ani-appearByRightReversed-01'}`}>
           <h4 className="h4-wp-txt-item-title">
             <span className="wp-txt-mark">5º</span>
             Deploy e configuração!
@@ -232,19 +259,19 @@ const OQueFacoWorkProcess = () => {
           </div>
 
           <div onClick={handle_wp_5} className="c-wp-item-footer">
-            <p className="p-wp-footer-txt">
+            <p className={`p-wp-footer-txt ${anima_wp_05 ? 'p-wp-footer-txt-mark' : ''}`}>
               mostrar / ocultar ...
             </p>
             <div className="wp-sign">
-              <div className="wp-sign-item-1">   </div>
-              <div className="wp-sign-item-2">   </div>
+              <div className={`wp-sign-item-1 ${anima_wp_05 ? 'wp-sign-item-1-mark' : ''}`}>   </div>
+              <div className={`wp-sign-item-2 ${anima_wp_05 ? 'wp-sign-item-2-mark' : ''}`}>   </div>
             </div>
           </div>
         </div>
 
         
 
-        <div className="c-wp-item">
+        <div className={`c-wp-item ${ani_03 ? 'ani-appearByRight-09' : 'ani-appearByRightReversed-01'}`}>
           <h4 className="h4-wp-txt-item-title">
             <span className="wp-txt-mark">6º</span>
             3 meses de suporte gratuito!
@@ -264,12 +291,12 @@ const OQueFacoWorkProcess = () => {
           </div>
 
           <div onClick={handle_wp_6} className="c-wp-item-footer">
-            <p className="p-wp-footer-txt">
+            <p className={`p-wp-footer-txt ${anima_wp_06 ? 'p-wp-footer-txt-mark' : ''}`}>
               mostrar / ocultar ...
             </p>
             <div className="wp-sign">
-              <div className="wp-sign-item-1">   </div>
-              <div className="wp-sign-item-2">   </div>
+              <div className={`wp-sign-item-1 ${anima_wp_06 ? 'wp-sign-item-1-mark' : ''}`}>   </div>
+              <div className={`wp-sign-item-2 ${anima_wp_06 ? 'wp-sign-item-2-mark' : ''}`}>   </div>
             </div>
           </div>
         </div>

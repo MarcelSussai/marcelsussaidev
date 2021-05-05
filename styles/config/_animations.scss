@@ -260,6 +260,30 @@
   opacity: 0;
   animation: appearByRight .8s cubic-bezier($cb-10) forwards;
 }
+.ani-appearByRight-04 {
+  opacity: 0;
+  animation: appearByRight .8s cubic-bezier($cb-16) forwards;
+}
+.ani-appearByRight-05 {
+  opacity: 0;
+  animation: appearByRight .8s cubic-bezier($cb-16) .1s forwards;
+}
+.ani-appearByRight-06 {
+  opacity: 0;
+  animation: appearByRight .8s cubic-bezier($cb-16) .2s forwards;
+}
+.ani-appearByRight-07 {
+  opacity: 0;
+  animation: appearByRight .8s cubic-bezier($cb-16) .3s forwards;
+}
+.ani-appearByRight-08 {
+  opacity: 0;
+  animation: appearByRight .8s cubic-bezier($cb-16) .4s forwards;
+}
+.ani-appearByRight-09 {
+  opacity: 0;
+  animation: appearByRight .8s cubic-bezier($cb-16) .5s forwards;
+}
 
 .ani-appearByRightReversed-01 {
   animation: appearByRightReversed .8s cubic-bezier($cb-16) forwards;
