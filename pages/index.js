@@ -2,6 +2,7 @@ import Head from '../components/head';
 import Header from '../components/header';
 import Home from '../components/home';
 import OQueFaco from '../components/oquefaco';
+import QuemSou from '../components/quemSou';
 
 const MarcelSussai = () => (
   <main className="main">
@@ -11,7 +12,13 @@ const MarcelSussai = () => (
     <Home />
     <a name="oquefaco" id="oquefaco" />
     <OQueFaco />
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <a name="quemsou" id="quemsou" />
+    <QuemSou />
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
   </main>
 );
 

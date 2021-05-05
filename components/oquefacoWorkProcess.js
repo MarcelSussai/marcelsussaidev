@@ -22,37 +22,31 @@ const OQueFacoWorkProcess = () => {
   const handle_wp_1 = (e) => {
     e.preventDefault();
     setAnima_wp_01(!anima_wp_01);
-    console.log('1 - ', anima_wp_01);
   }
 
   const handle_wp_2 = (e) => {
     e.preventDefault();
     setAnima_wp_02(!anima_wp_02);
-    console.log('2 - ', anima_wp_02);
   }
 
   const handle_wp_3 = (e) => {
     e.preventDefault();
     setAnima_wp_03(!anima_wp_03);
-    console.log('3 - ', anima_wp_03);
   }
 
   const handle_wp_4 = (e) => {
     e.preventDefault();
     setAnima_wp_04(!anima_wp_04);
-    console.log('4 - ', anima_wp_04);
   }
 
   const handle_wp_5 = (e) => {
     e.preventDefault();
     setAnima_wp_05(!anima_wp_05);
-    console.log('5 - ', anima_wp_05);
   }
 
   const handle_wp_6 = (e) => {
     e.preventDefault();
     setAnima_wp_06(!anima_wp_06);
-    console.log('6 - ', anima_wp_06);
   }
 
   useEffect(() => {

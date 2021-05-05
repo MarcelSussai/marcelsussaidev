@@ -14,15 +14,12 @@ const NavMenu = () => {
 
   return (
   <>
-    <div  className={`c-btn-menu ${menuOpen ? 'opened' : ''}`} 
-          onClick={tooggleOpen}
-    >
+    <div  className={`c-btn-menu ${menuOpen ? 'opened' : ''}`} onClick={tooggleOpen}>
       <div className={`btn-menu ${menuOpen ? 'open' : ''}`}>
         <div className={`line-menu half start ${menuOpen ? 'openColor' : ''}`}></div>
         <div className={`line-menu ${menuOpen ? 'openColor' : ''}`}></div>
         <div className={`line-menu half end ${menuOpen ? 'openColor' : ''}`}></div>
       </div>
-
     </div>
 
     <nav className={`c-nav ${menuOpen ? 'nav-open' : ''}`}>
@@ -41,7 +38,7 @@ const NavMenu = () => {
 
         <li className="c-nav-ul-li">
           <Link href="#oquefaco">
-            <a className="link"  onClick={closeMenu}>
+            <a className="link" onClick={closeMenu}>
               <div className="c-menu-logo">
                 <LogoQueFaco />
               </div>

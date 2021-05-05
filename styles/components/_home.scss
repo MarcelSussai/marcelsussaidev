@@ -10,6 +10,9 @@
   @media (min-width: 686px) {
     transform: translateY(112px);
   }
+  @media (min-width: 808px) {
+    transform: translateY(104px);
+  }
 
   .c-art-home {
 
@@ -238,7 +241,7 @@
 }
 
 .c-wp {
-  margin: 16px;
+  margin: 16px 16px 0 16px;
   overflow: hidden;
 
   .c-wp-item {
@@ -380,6 +383,53 @@
 }
 
 
+.c-githb-link {
+  @include displayFlex(center,center);
+  @include gradientBorder(2px, false, false, true, false);
+  width: 100%;
+  margin-top: 32px;
+  padding-bottom: 32px;
+
+  .a-github-link {
+    @include displayFlex(center,center);
+    border-top: 2px solid $color-black-10;
+    border-right: 2px solid $color-black-01;
+    border-bottom: 2px solid $color-black-01;
+    border-left: 2px solid $color-black-10;
+    flex-direction: row;
+    gap: 8px;
+    padding: 8px;
+    text-decoration: none;
+    color: $color-yellow-03;
+    background: $color-black-05;
+    border-radius: 8px;
+    box-shadow: inset -2px -2px 16px rgba(#000, .8), inset 2px 2px 16px rgba(#fff, .4);
+  
+    .p-link-github {
+      @include font(4.8vw, 500, 1, 02);
+      
+      @media (min-width: 686px) {
+        font-size: 1.2rem;
+      }
+    }
+    .c-img-github-link {
+      padding: 6px;
+      background: rgba($color-black-12, .96);
+      border-radius: 50%;
+      .img-github-svg-link{
+        height: 7vw;
+
+        @media (min-width: 686px) {
+          height: 1.6rem;
+        }
+
+      }
+    }
+  }
+}
+
+
+
 
 
 .cancel-padding {
@@ -392,18 +442,15 @@
 .mark-txt-color-blue2 {
   color: $color-blue-02;
 }
-
 .mark-txt-color-green {
   color: $color-green-01;
 }
 .mark-txt-color-green2 {
   color: $color-green-02;
 }
-
 .mark-txt-color-yellow {
   color: $color-yellow-01;
 }
-
 .mark-txt-bold {
   font-weight: 800;
 }

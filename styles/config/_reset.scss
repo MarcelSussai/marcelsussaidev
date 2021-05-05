@@ -36,7 +36,7 @@ dd {
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 // Ajeitando o Body
@@ -46,6 +46,7 @@ body {
   // text-rendering: optimizeSpeed;
   padding: 0;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 
