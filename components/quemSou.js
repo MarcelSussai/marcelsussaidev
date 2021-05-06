@@ -89,8 +89,8 @@ const QuemSou = () => {
           </p>
         </div>
 
-        <div ref={el_03} className={`c-githb-link ${ani_03 ? 'ani-appearByBottom-02' : 'ani-appearByBottomReversed-01'}`}>
-          <a rel="noreferrer" className="a-github-link" href="https://github.com/MarcelSussai" target="_blank">
+        <div ref={el_03} className={`c-githb-link ${ani_03 ? 'ani-appear-02' : 'ani-appearReversed-01'}`}>
+          <a rel="noreferrer" className={`a-github-link ${ani_03 ? 'ani-appearByBottom-02' : 'ani-appearByBottomReversed-01'}`} href="https://github.com/MarcelSussai" target="_blank">
             <div className="c-img-github-link">
               <img src="/logoSkills/LogoGitHub.svg" alt="GitHub" className="img-github-svg-link" />
             </div>
@@ -102,6 +102,8 @@ const QuemSou = () => {
           Algumas habilidades que tenho:
         </p>
 
+
+
       </article>
     </section>
   </>
@@ -110,16 +112,3 @@ const QuemSou = () => {
 }
 
 export default QuemSou;
-/*
-logos que faltam pegar os arquivos svg ao invés de componente react svg
-
-javascript
-npm
-AdobeXd
-NGINX
-Strapi
-PostgreeSQL
-Sequelize
-Expo
-
-*/
