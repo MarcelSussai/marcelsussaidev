@@ -8,7 +8,6 @@
     opacity: 1;
   }
 }
-
 @keyframes appearByRightReversed {
   from {
     transform: translate3d(0);
@@ -30,7 +29,6 @@
     opacity: 1;
   }
 }
-
 @keyframes appearByLeftReversed {
   from {
     transform: translate3d(0);
@@ -52,7 +50,6 @@
     opacity: 1;
   }
 }
-
 @keyframes appearByTopReversed {
   from {
     transform: translate3d(0);
@@ -74,7 +71,6 @@
     opacity: 1;
   }
 }
-
 @keyframes appearByBottomReversed {
   from {
     transform: translate3d(0);
@@ -94,7 +90,6 @@
     opacity: 1;
   }
 }
-
 @keyframes appearReversed {
   from {
     opacity: 1;
@@ -114,7 +109,6 @@
     opacity: 1;
   }
 }
-
 @keyframes appearByScaleReversed {
   from {
     transform: scale3d(100%);
@@ -238,6 +232,10 @@
 .ani-appearByBottom-01 {
   opacity: 0;
   animation: appearByBottom .4s cubic-bezier($cb-05) .2s forwards;
+}
+.ani-appearByBottom-02 {
+  opacity: 0;
+  animation: appearByBottom .4s cubic-bezier($cb-14) forwards;
 }
 
 .ani-appearByBottomReversed-01 {

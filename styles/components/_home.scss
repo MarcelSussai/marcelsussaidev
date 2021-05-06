@@ -226,8 +226,7 @@
   color: $color-black-04;
   padding: 8px;
   text-align: center;
-  z-index: -1;
-  background: #fff;
+  z-index: -100;
 
   @media (min-width: 686px) {
     font-size: 1.16rem;
@@ -389,6 +388,7 @@
   width: 100%;
   margin-top: 32px;
   padding-bottom: 32px;
+  overflow: hidden;
 
   .a-github-link {
     @include displayFlex(center,center);

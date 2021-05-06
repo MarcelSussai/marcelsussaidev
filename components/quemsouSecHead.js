@@ -29,7 +29,7 @@ const QuemSouSecHead = () => {
       // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
       // ________________________________________________________________
-      let a_Calc_02 = e_02.current.offsetTop + e_02.current.offsetParent.offsetTop + 32;
+      let a_Calc_02 = e_02.current.offsetTop + e_02.current.offsetParent.offsetTop + 64;
       let condition_02 = onAni >= a_Calc_02;
       setAniQ02(condition_02);
       // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾

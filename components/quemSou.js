@@ -4,6 +4,16 @@ import QuemSouSecHead from "./quemsouSecHead"
 
 const QuemSou = () => {
 
+  const el_01 = useRef(null);
+  const el_02 = useRef(null);
+  const el_03 = useRef(null);
+  const el_04 = useRef(null);
+
+  const [ani_01, setAni_01] = useState(Boolean);
+  const [ani_02, setAni_02] = useState(Boolean);
+  const [ani_03, setAni_03] = useState(Boolean);
+  const [ani_04, setAni_04] = useState(Boolean);
+
   const [anos, setAnos] = useState(0);
 
   useEffect(() => {
@@ -23,7 +33,23 @@ const QuemSou = () => {
 
     const scroll = (e) => {
       e.preventDefault();
-      
+      let onAni = window.pageYOffset + (window.innerHeight * 3 / 4) - 32;
+  
+      let a_Calc_01 = el_01.current.offsetTop + el_01.current.offsetParent.offsetTop;
+      let condition_01 = onAni >= a_Calc_01;
+      setAni_01(condition_01);
+  
+      let a_Calc_02 = el_02.current.offsetTop + el_02.current.offsetParent.offsetTop;
+      let condition_02 = onAni >= a_Calc_02;
+      setAni_02(condition_02);
+  
+      let a_Calc_03 = el_03.current.offsetTop + el_03.current.offsetParent.offsetTop;
+      let condition_03 = onAni >= a_Calc_03;
+      setAni_03(condition_03);
+  
+      let a_Calc_04 = el_04.current.offsetTop + el_04.current.offsetParent.offsetTop;
+      let condition_04 = onAni >= a_Calc_04;
+      setAni_04(condition_04);
     }
 
 
@@ -43,10 +69,10 @@ const QuemSou = () => {
       <article className="c-art-home">
 
         <div className="c-piece-art-txt">
-          <h3 className={`h3-txt-art-title ${true ? 'ani-appearByLeft-02' : 'ani-appearByLeftReversed-01' }`}>
+          <h3 ref={el_01} className={`h3-txt-art-title ${ani_01 ? 'ani-appearByLeft-02' : 'ani-appearByLeftReversed-01' }`}>
             Adoro a tecnologia! ...
           </h3>
-          <p className={`p-txt-art-piece ${true ? 'ani-appearByScale-03' : 'ani-appearByScaleReversed-01' }`}>
+          <p ref={el_02} className={`p-txt-art-piece ${ani_02 ? 'ani-appearByScale-03' : 'ani-appearByScaleReversed-01' }`}>
             Tenho {anos} anos, mas desde que era criança me interesso por computadores e
             tecnologias relacionadas, trago uma bagagem e
             <span className="mark-txt-color-green mark-txt-bold"> experiência de quem gosta do que faz</span>,
@@ -63,7 +89,7 @@ const QuemSou = () => {
           </p>
         </div>
 
-        <div className="c-githb-link">
+        <div ref={el_03} className={`c-githb-link ${ani_03 ? 'ani-appearByBottom-02' : 'ani-appearByBottomReversed-01'}`}>
           <a rel="noreferrer" className="a-github-link" href="https://github.com/MarcelSussai" target="_blank">
             <div className="c-img-github-link">
               <img src="/logoSkills/LogoGitHub.svg" alt="GitHub" className="img-github-svg-link" />
@@ -72,7 +98,7 @@ const QuemSou = () => {
           </a>
         </div>
 
-        <p className="p-txt-comment">
+        <p ref={el_04} className={`p-txt-comment ${ani_04 ? 'ani-appearByTop-02' : 'ani-appearByTopReversed-01'}`}>
           Algumas habilidades que tenho:
         </p>
 
