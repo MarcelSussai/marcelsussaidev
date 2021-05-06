@@ -145,6 +145,10 @@
   opacity: 0;
   animation: appear .4s cubic-bezier($cb-02) .4s forwards;
 }
+.ani-appear-04 {
+  opacity: 0;
+  animation: appear .6s cubic-bezier($cb-03) .4s forwards;
+}
 
 .ani-appearReversed-01 {
   animation: appearReversed .4s cubic-bezier($cb-02) forwards;

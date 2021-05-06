@@ -381,7 +381,6 @@
   color: $color-purple-04 !important;
 }
 
-
 .c-githb-link {
   @include displayFlex(center,center);
   @include gradientBorder(2px, false, false, true, false);
@@ -428,6 +427,74 @@
   }
 }
 
+.c-skills {
+  @include gradientBorder(2px, false, false, true, false);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 8px 8px 16px 8px;
+  background: linear-gradient(95deg, $color-blue-04, $color-green-04);
+
+  @media (min-width: 425px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: 686px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .c-skills-item {
+    @include displayFlex(center, center);
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px rgba($color-black-01, .3);
+
+    .c-skills-img-logo {
+      @include displayFlex(center,center);
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+      background: $color-black-13;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      box-shadow: inset -4px -4px 16px rgba($color-black-04, .3);
+
+      .img-svg-skill {
+        height: 20vw;
+
+        @media (min-width: 425px) {
+          height: 12vw;
+        }
+        @media (min-width: 686px) {
+          height: 64px;
+        }
+
+      }
+    }
+
+    .p-txt-skills {
+      @include font(4.2vw, 400, 1.4, 02);
+      padding: 8px;
+      color: $color-yellow-04;
+      background: $color-black-04;
+      width: 100%;
+      text-align: center;
+      border-top: solid 2px $color-black-09;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      
+      @media (min-width: 425px) {
+        font-size: 3.2vw;
+      }
+      
+      @media (min-width: 686px) {
+        font-size: 1rem;
+      }
+    }
+
+  }
+
+}
+
 
 .img-png-foto {
   // @include gradientBorder(2px, false, false, true, false);
@@ -444,7 +511,6 @@
   align-items: flex-end !important;
   padding: 0 !important;
 }
-
 
 .cancel-padding {
   padding: 0 !important;

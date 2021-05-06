@@ -1,9 +1,32 @@
+import { useEffect, useRef, useState } from 'react';
 
 
 const ResourceSkills = () => {
+
+  const el = useRef(null);
+  const [anima, setAnima] = useState(Boolean);
+
+  useEffect(() => {
+
+    const scroll = (e) => {
+      e.preventDefault();
+
+      let onAni = window.pageYOffset + (window.innerHeight * 3 / 4) - 32;
+      let a_Calc_01 = el.current.offsetTop + el.current.offsetParent.offsetTop;
+      let condition_01 = onAni >= a_Calc_01;
+      setAnima(condition_01);
+
+    }
+
+    window.addEventListener("scroll", scroll, false);
+    return  () => {
+      window.removeEventListener("scroll", scroll, false);
+    }
+  }, []);
+
   return (
   <>
-    <div className="c-skills">
+    <div ref={el} className={`c-skills ${anima ? 'ani-appear-04' : 'ani-appearReversed-01'}`}>
 
       <div className="c-skills-item">
         <div className="c-skills-img-logo">
