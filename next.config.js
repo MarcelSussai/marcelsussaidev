@@ -4,5 +4,18 @@ module.exports = {
       fs: 'empty'
     }
     return config
+  },
+  async Headers() {
+    return [
+      {
+        source: '/',
+        headers: [
+          {
+            key: 'Accept-Encoding',
+            value: 'gzip'
+          }
+        ]
+      }
+    ]
   }
 };
