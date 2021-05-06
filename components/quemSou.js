@@ -64,7 +64,7 @@ const QuemSou = () => {
         </div>
 
         <div className="c-githb-link">
-          <a className="a-github-link" href="https://github.com/MarcelSussai" target="_blank">
+          <a rel="noreferrer" className="a-github-link" href="https://github.com/MarcelSussai" target="_blank">
             <div className="c-img-github-link">
               <img src="/logoSkills/LogoGitHub.svg" alt="GitHub" className="img-github-svg-link" />
             </div>
