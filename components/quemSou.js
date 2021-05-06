@@ -84,3 +84,16 @@ const QuemSou = () => {
 }
 
 export default QuemSou;
+/*
+logos que faltam pegar os arquivos svg ao invés de componente react svg
+
+javascript
+npm
+AdobeXd
+NGINX
+Strapi
+PostgreeSQL
+Sequelize
+Expo
+
+*/

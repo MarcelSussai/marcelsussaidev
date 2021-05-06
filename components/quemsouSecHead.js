@@ -69,9 +69,9 @@ const QuemSouSecHead = () => {
           sou curioso e
           <span className="mark-txt-color-green"> autodidata</span>....
         </h2>
-        <div className={`c-sec-head-content-img ${aniQ02 ? 'ani-appearByRight-01' : 'ani-appearByRightReversed-02' }`}>
-          <div className={`c-sec-head-img ${aniQ02 ? 'ani-appearByRight-02' : 'ani-appearByRightReversed-01' }`}>
-
+        <div className={`c-sec-head-content-img img-png-correction-c ${aniQ02 ? 'ani-appearByRight-01' : 'ani-appearByRightReversed-02' }`}>
+          <div className={`c-sec-head-img img-png-correction-c ${aniQ02 ? 'ani-appearByRight-02' : 'ani-appearByRightReversed-01' }`}>
+            <img src="/foto.png" alt="Minha foto" className="img-png-foto" />
           </div>
         </div>
       </div>
