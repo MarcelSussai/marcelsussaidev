@@ -1,4 +1,6 @@
-module.exports = {
+const withPWA = require('next-pwa');
+
+module.exports = withPWA({
   env: {
     PASS: process.env.PASS
   },
@@ -20,5 +22,10 @@ module.exports = {
         ]
       }
     ]
+  },
+  pwa: {
+    dest: 'public',
+    register: true,
+    sw: '/sw.js'
   }
-};
+});

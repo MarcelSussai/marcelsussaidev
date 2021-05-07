@@ -1,0 +1,36 @@
+{
+  "name": "MarcelSussai Desenvolvedor FullStack",
+  "short_name": "MarcelSussai",
+  "description": "Criação de sites, lojas virtuais, aplicativos, web apps e mais .... Marcel Sussai Desenvolvedor Fullstack freelancer",
+  "theme_color": "#3c90e5",
+  "background_color": "#161616",
+  "display": "standalone",
+  "lang": "pt-BR",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [{
+    "src": "/logoMS.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "/logoMS.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "/logoMS.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "/logoMS.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "/logoMS.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "/logoMS.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
