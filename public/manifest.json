@@ -37,11 +37,5 @@
     "src": "/logoMS.png",
     "sizes": "512x512",
     "type": "image/png"
-  }], "prefer_related_applications": true,
-  "related_applications": [
-    {
-      "platform": "play",
-      "id": "com.google.samples.apps.iosched"
-    }
-  ]
+  }], "prefer_related_applications": false,
 }
