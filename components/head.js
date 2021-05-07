@@ -17,6 +17,9 @@ const Head = (props) => (
     <link rel="apple-touch-icon" sizes="180x180" href="/logoMS.png" />
     <meta property="og:title" content={props.title || ''} />
     <meta property="og:description" content={props.description || defaultDescription} />
+    <meta property='og:image' content='/logoMS.png'/>
+    
+    <meta property='og:url' content='https://marcelsussai.dev'/>  
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
