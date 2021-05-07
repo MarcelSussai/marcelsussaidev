@@ -156,6 +156,7 @@ const Contato = () => {
               ref={el_name}
               type="text" 
               name="name" 
+              id="name" 
               className="fg-input" 
               onChange={handleChangeName}
               onFocus={handleFocusName}
@@ -170,6 +171,7 @@ const Contato = () => {
               ref={el_email}
               type="text"
               name="email"
+              id="email" 
               className="fg-input"
               onChange={handleChangeEmail}
               onFocus={handleFocusEmail}
@@ -183,6 +185,7 @@ const Contato = () => {
             <textarea 
               ref={el_msg}
               name="msg"
+              id="msg"
               className="fg-txtarea-msg"
               onChange={handleChangeMsg}
               onFocus={handleFocusMsg}
