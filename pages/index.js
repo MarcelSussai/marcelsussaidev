@@ -1,8 +1,10 @@
+import Contato from '../components/contato';
 import Head from '../components/head';
 import Header from '../components/header';
 import Home from '../components/home';
 import OQueFaco from '../components/oquefaco';
 import QuemSou from '../components/quemSou';
+import Footer from './../components/footer';
 
 const MarcelSussai = () => (
   <main className="main">
@@ -14,11 +16,9 @@ const MarcelSussai = () => (
     <OQueFaco />
     <a name="quemsou" id="quemsou" />
     <QuemSou />
-
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <a name="contato" id="contato" />
+    <Contato />
+    <Footer />
   </main>
 );
 

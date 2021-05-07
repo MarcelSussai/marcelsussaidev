@@ -389,6 +389,13 @@
   padding-bottom: 32px;
   overflow: hidden;
 
+  @media (min-width:686px) {
+    width: 686px;
+  }
+  @media (min-width:808px) {
+    width: 760px;
+  }
+
   .a-github-link {
     @include displayFlex(center,center);
     border-top: 2px solid $color-black-10;
@@ -495,6 +502,161 @@
 
 }
 
+.c-form {
+  @include displayFlex(center, center);
+  @include gradientBorder(2px, false, false, true, false);
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  padding: 16px;
+  background: linear-gradient(90deg, rgba($color-blue-04, .8), rgba($color-green-04, .8));
+  overflow: hidden;
+
+  @media (min-width:686px) {
+    width: 686px;
+  }
+  @media (min-width:808px) {
+    width: 760px;
+  }
+
+  .h3-txt-form-email {
+    @include font(6vw, 700, 1.5, 02);
+    @include gradientBorder(2px, true, false, true ,false);
+    // color: darken($color-other-green-01, 12);
+    color: $color-blue-01;
+    text-shadow: 1px 1px 2px rgba($color-black-01, .2);
+    padding: 8px;
+    background: rgba(#fff, .8);
+    width: 100%;
+    text-align: center;
+    
+    @media (min-width:686px) {
+      font-size: 36px;
+    }
+  }
+
+  .c-fg-form {
+    @include displayFlex(center,center);
+    flex-direction: column;
+    width: 100%;
+
+    .fg-label {
+      @include displayFlex(center, center);
+      @include font(4.6vw, 600, 1.6, 02);
+      @include transitionMix(04, .4s);
+      text-align: center;
+      padding: 8px 8px 6px 8px;
+      background: rgba(#fff, .8);
+      width: 94%;
+      height: 18vw;
+      box-shadow: inset 0 -4px 16px rgba($color-black-08, .2);
+
+      
+      @media (min-width:686px) {
+        font-size: 22px;
+        height: 88px;
+      }
+
+    }
+    .fg-txtarea-msg {
+      @include font(4.6vw, 500, 1.6, 02);
+      color: $color-black-04;
+      width: 100%;
+      height: 200px;
+      padding: 8px;
+      border: 2px solid $color-black-08;
+      border-radius: 4px;
+      box-shadow: 2px 2px 8px rgba($color-black-08, .2);
+      
+      @media (min-width:686px) {
+        font-size: 24px;
+      }
+    }
+    .fg-input {
+      @include font(4.6vw, 500, 1.6, 02);
+      color: $color-black-04;
+      width: 100%;
+      padding: 8px;
+      border: 2px solid $color-black-08;
+      border-radius: 4px;
+      @media (min-width:686px) {
+        font-size: 24px;
+      }
+    }
+  }
+  
+  .btn-submit {
+    @include font(5.6vw, 900, 1, 02);
+    @include transitionMix(04, .4s);
+    background: $color-black-04;
+    color: $color-other-green-03;
+    border-top: 2px solid $color-other-green-04;
+    border-right: 2px solid $color-other-green-01;
+    border-bottom: 2px solid $color-other-green-01;
+    border-left:  2px solid $color-other-green-04;
+    box-shadow: 0 0 16px rgba($color-other-green-02, .4);
+    border-radius: 4px;
+    padding: 16px;
+    width: 64%;
+    @media (min-width:686px) {
+      font-size: 30px;
+      align-self: flex-end;
+    }
+
+    &:disabled {
+      @include transitionMix(04, .4s);
+      border: none;
+      box-shadow: none;
+      opacity: .4;
+    }
+
+  }
+
+}
+
+.c-alert {
+  @include displayFlex(center,center);
+  @include transitionMix(16, .6s);
+  text-align: center;
+  padding: 16px;
+  background: $color-black-04;
+  width: 88%;
+  height: 64%;
+  position: absolute;
+  border: 2px solid $color-other-green-02;
+  // top: 24%;
+
+  .txt-alert-send {
+    @include font(10vw, 900, 1.6, 02);
+    color: $color-other-green-03;
+    @media (min-width:686px) {
+      font-size: 64px;
+    }
+  }
+
+}
+.c-limmiter {
+  @include displayFlex(center, center);
+  position: relative;
+  width: 100%;
+  
+  @media (min-width:686px) {
+    width: 686px;
+  }
+  @media (min-width:808px) {
+    width: 760px;
+  }
+}
+.c-alert-send {
+  @include transitionMix(16, .6s);
+  transform: translate3d(-200%, 0, 0);
+  opacity: 0;
+}
+.c-alert-send-true {
+  @include transitionMix(16, .6s);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
 
 .img-png-foto {
   // @include gradientBorder(2px, false, false, true, false);
@@ -535,5 +697,93 @@
   font-weight: 800;
 }
 
+.mark-redAlert {
+  @include transitionMix(04, .4s);
+  color: $color-red-02;
+}
 
+.c-footer {
+  @include displayFlex(flex-start, center);
+  background: $color-black-01;
+  width: 100%;
+  height: fit-content;
+  padding: 0;
+  transform: translateY(86px);
+  @media (min-width:686px) {
+    justify-content: center;
+  }
 
+  .c-footer-sec {
+    @include displayFlex(flex-start, center);
+    flex-direction: column;
+    padding: 80px 8px 16px 8px;
+    width: 100%;
+    // height: 100%;
+    @media (min-width:686px) {
+      width: 686px;
+    }
+    @media (min-width:808px) {
+      width: 760px;
+    }
+
+    .c-adress {
+      width: 100%;
+      // height: 100%;
+      padding: 8px;
+      margin-bottom: 40px;
+
+      .p-txt-info {
+        @include font(4.471vw, 500, 2, 02);
+        color: $color-black-12;
+        @media (min-width:686px) {
+          font-size: 16px;
+        }
+      }
+
+    }
+
+    .c-madeBy {
+      margin-left: 8px;
+      align-self: flex-start;
+
+      .h5-footer {
+        @include font(5.6vw, 300, 1.4, 02);
+        margin: 8px;
+        color: $color-yellow-04;
+        @media (min-width:686px) {
+          font-size: 18px;
+        }
+      }
+
+      .c-logotype {
+        @include displayFlex(center,center);
+        flex-direction: row;
+        gap: 8px;
+
+        .p-txt-type-footer {
+          @include gradientBorder(1px, true, false, true, false);
+          @include font(6vw, 900, 1.8, 01);
+          @media (min-width:686px) {
+            font-size: 32px;
+            line-height: 1.7;
+          }
+        }
+  
+        .logo-footer {
+          width: 13vw;
+          @media (min-width:686px) {
+            width: 64px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mark-footer-marcel {
+  color: $color-blue-02;
+  margin-right: 6px;
+}
+.mark-footer-sussai {
+  color: $color-green-02;
+}

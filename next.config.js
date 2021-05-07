@@ -1,4 +1,7 @@
 module.exports = {
+  env: {
+    PASS: process.env.PASS
+  },
   webpack: (config) => {
     config.node = {
       fs: 'empty'

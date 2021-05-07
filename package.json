@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next --http2",
+    "dev": "next",
     "build": "next build",
     "start": "next start --http2"
   },
@@ -14,6 +14,7 @@
   "dependencies": {
     "http2": "^3.3.7",
     "next": "^10.1.3",
+    "nodemailer": "^6.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sass": "^1.32.11"
