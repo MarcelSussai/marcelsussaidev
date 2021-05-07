@@ -8,7 +8,7 @@ import Footer from './../components/footer';
 
 const MarcelSussai = () => (
   <main className="main">
-    <Head title="Home" />
+    <Head title="Marcel Sussai - Desenvolvedor Web Full Stack" />
     <Header />
     <a name="home" id="home" />
     <Home />
