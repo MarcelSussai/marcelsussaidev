@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
 
         <div className="c-madeBy">
-          <h5 className="h5-footer">Desenvolvido por...</h5>
+          <h4 className="h5-footer">Desenvolvido por...</h4>
           <div className="c-logotype">
             <LogoMarcelSussai className="logo-footer" />
             <p className="p-txt-type-footer">
