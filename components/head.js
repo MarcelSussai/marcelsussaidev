@@ -2,7 +2,7 @@ import NextHead from 'next/head';
 import { string } from 'prop-types';
 
 const defaultDescription = 'Criação de sites, lojas virtuais, aplicativos, web apps e mais .... Marcel Sussai Desenvolvedor Fullstack freelancer';
-const defaultKeywords = 'criação de sites lojas virtuais webdesign sorocaba ';
+const defaultKeywords = 'criação de sites, lojas virtuais, webdesign, sorocaba, front-end, full-stack, digital, desenvolvimento, sites, web aps, pwa';
 
 const Head = (props) => (
   <NextHead>
